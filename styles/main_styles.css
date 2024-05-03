@@ -992,6 +992,43 @@ section {
 /*********************************
 9. Counter
 *********************************/
+/* img slider */
+/* h1 {
+  font-size: 50px;
+  color: #fff;
+} */
+.content {
+  /* position: absolute; */
+  top: 47%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  padding: 8% 0% 0% 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery {
+  display: flex;
+  /* overflow-x: hidden; */
+  width: 60%;
+  height: 400px;
+  gap: 2px;
+}
+.gallery > img {
+  width: 20%;
+  height: 400px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 3px solid black;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+.gallery > img:hover {
+  width: 100%;
+  transform: scale(1.1); /* Correct property name for scaling */
+}
+
+/* img slider end */
 
 .counter {
   width: 100%;
@@ -1008,17 +1045,43 @@ section {
   background-size: cover;
   background-position: center center;
 }
+.slide .h2 {
+  background-image: linear-gradient(90deg, #ff00d2, #fed90f, #00a2ff, #09f1b8);
+  background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: calc(1em / 16);
+  -webkit-background-clip: text;
+  color: black;
+}
+.slide .h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 900;
+  font-size: 50px;
+}
+.slide .p {
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+.slide .p {
+  background-image: linear-gradient(90deg, #ff00d2, #fed90f, #00a2ff, #09f1b8);
+  background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: calc(1em / 16);
+  -webkit-background-clip: text;
+  color: black;
+}
 .counter_content {
   padding-top: 119px;
   padding-bottom: 125px;
+}
+.counter_text {
+  margin-top: 19px;
 }
 .counter_title {
   font-family: "Roboto Slab", serif;
   color: #ffffff;
   font-weight: 700;
-}
-.counter_text {
-  margin-top: 19px;
 }
 .counter_text p {
   color: #ffffff;
@@ -1061,12 +1124,12 @@ section {
 .counter_form {
   position: absolute;
   top: 0;
-  right: 30px;
-  width: 380px;
+  right: 5px;
+  width: 400px;
   height: 100%;
-  background: #ffffff;
-  padding-left: 40px;
-  padding-right: 40px;
+  /* background: #ffffff; */
+  padding-left: 10px;
+  padding-right: 10px;
   box-shadow: 0px 5px 40px rgba(29, 34, 47, 0.15);
 }
 .counter_form_content {
@@ -1079,7 +1142,8 @@ section {
   font-family: "Roboto Slab", serif;
   font-size: 24px;
   font-weight: 700;
-  color: #384158;
+  color: #ffffff;
+  /* color: #384158; */
   text-transform: uppercase;
   line-height: 0.75;
   margin-bottom: 41px;
@@ -1088,7 +1152,7 @@ section {
   width: 100%;
   height: 46px;
   border: solid 1px #e5e5e5;
-  border-radius: 3px;
+  border-radius: 5px;
   padding-left: 20px;
   outline: none;
   color: #384158;
